@@ -44,3 +44,36 @@ selection_method <- variable_selection_methods(
 )
 
 print(selection_method)
+
+# Data for the ANOVA table
+data <- data.frame(
+  Source = c(
+    "p", "n", "q", "pos", "gamma", "PLSMethod",
+    "p:pos", "p:gamma", "n:q", "n:pos", "n:gamma", "q:gamma",
+    "p:PLSMethod", "gamma:PLSMethod", "p:gamma:PLSMethod", "Residuals"
+  ),
+  Sum_Sq = c(
+    0.002, 86.987, 2.934, 3.224, 144.743, 18.785,
+    0.588, 0.652, 0.691, 1.193, 46.926, 5.851,
+    4.835, 8.136, 4.419, 280.809
+  ),
+  Df = c(
+    1, 1, 1, 1, 1, 14,
+    1, 1, 1, 1, 1, 1,
+    14, 14, 14, 4732
+  ),
+  F_value = c(
+    0.0302, 1465.8391, 49.4375, 54.3282, 2439.1073, 22.6107,
+    9.9117, 10.9786, 11.6409, 20.0977, 790.7716, 98.6028,
+    5.8199, 9.7926, 5.3195, NA
+  ),
+  Pr_greater_F = c(
+    0.8620110, "< 2.2e-16", "2.340e-12", "1.992e-13", "< 2.2e-16", "< 2.2e-16",
+    "0.0016525", "0.0009286", "0.0006506", "7.532e-06", "< 2.2e-16", "< 2.2e-16",
+    "1.937e-11", "< 2.2e-16", "3.629e-10", NA
+  )
+)
+
+# Display the table
+print(data)
+
