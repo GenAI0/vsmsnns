@@ -37,12 +37,10 @@ variable_selection_methods <- function(LW, RC, JT, VIP, SR, sMC, mRMR,
       ST = ST, TRUNC = TRUNC, WVC = WVC)
 }
 
-# Example instantiation of the class with values from the question
 selection_method <- variable_selection_methods(
   LW = 0.05, RC = 0.17, JT = 0.15, VIP = 0.90, SR = 0.32, sMC = 25.2, mRMR = 0.75,
   GA = 8.39, MCUVE = 2.01, SPA = 0.33, IPW = 0.01, BVE = 1.12, REP = 1.15, T2 = 0.10,
   ST = 0.54, TRUNC = 0.90, WVC = 0.17
 )
 
-# Print the object to check the values
 print(selection_method)
