@@ -12,22 +12,21 @@ setClass(
     mRMR = "numeric", # Min. redundancy max. relevance
     
     # Wrapper methods parameters
-    GA = "numeric",   # Genetic algorithm with PLS
-    MCUVE = "numeric",# Monte-Carlo elimination with PLS
-    SPA = "numeric",  # Sub-window permutation in PLS
-    IPW = "numeric",  # Iterative predictor weighting PLS
-    BVE = "numeric",  # Backward variable elimination in PLS
-    REP = "numeric",  # Regularized elimination in PLS
-    T2 = "numeric",   # Hotelling T2 based selection in PLS
+    GA = "numeric",   # Genetic algorithm 
+    MCUVE = "numeric",# Monte-Carlo elimination
+    SPA = "numeric",  # Sub-window permutation
+    IPW = "numeric",  # Iterative predictor weighting 
+    BVE = "numeric",  # Backward variable elimination
+    REP = "numeric",  # Regularized elimination
+    T2 = "numeric",   # Hotelling T2 based selection
     
     # Embedded methods parameters
-    ST = "numeric",   # Soft-thresholding PLS
-    TRUNC = "numeric",# Truncation PLS
-    WVC = "numeric"   # Weighted variable contribution in PLS
+    ST = "numeric",   # Soft-thresholding
+    TRUNC = "numeric",# Truncation 
+    WVC = "numeric"   # Weighted variable contribution 
   )
 )
 
-# Initialize the object with the given parameters
 variable_selection_methods <- function(LW, RC, JT, VIP, SR, sMC, mRMR,
                                        GA, MCUVE, SPA, IPW, BVE, REP, T2, 
                                        ST, TRUNC, WVC) {
